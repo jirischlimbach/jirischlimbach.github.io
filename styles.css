@@ -100,12 +100,18 @@ h3 {
     background-color: #efd9ca;
 }
 
+.font-container {
+    overflow:hidden;
+    margin: 0 auto;
+}
+
 .font-panel {
-    width: 45%;
+    width: 40%;
     display: inline-block;
     text-align: center;
     line-height: 20px;
-    margin-top: 10px;
+    margin: 10px;
+    vertical-align: top;
 }
 
 .text-panel {

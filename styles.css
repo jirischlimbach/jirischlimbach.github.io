@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    text-align: center;
+    opacity: 0.9;
+}
+
+h2, h4 {
+    margin: 10px 0;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    width: 100%;
+    min-height: 69px;
+    display: flex;
+    border-bottom: 1px solid seashell;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+    background-color: black;
+}
+
+.logo {
+    display: inline-flex;
+    margin-left: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-flex;
+}
+
+.menu li+li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: underline;
+    color: seashell;
+}
+
+.menu a:hover {
+    color: #fed053;
+}
+
+/* HEADER */
+
+header {
+    top: 70px;
+    display: flex;
+    align-items: center;
+    background-image: url("images/img-mission-background.jpg");
+    max-width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mission {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TEA OF THE MONTH - FEATURED TEA */
+
+.featured_tea {
+    position: relative;
+    margin: 30px auto 0 auto;
+    max-width: 1000px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.featured_tea_images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.tea_image {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.tea_image img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+/* LOCATIONS */
+
+.locations_flexbox {
+    position: relative;
+    display: flex;
+    margin: 30px auto 0 auto;
+    max-width: 1200px;
+    min-height: 500px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 30px 0;
+    background-image: url("images/img-locations-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.locations_flexbox h2 {
+    margin-bottom: 0;
+}
+
+.locations_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.location {
+    display: inline-flex;
+    flex-direction: column;
+    width: 300px;
+    background: black;
+    margin: 20px;
+    line-height: 2.5rem;
+    padding: 15px;
+    opacity: 1;
+}
+
+/* FOOTER */
+
+.contact_footer {
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 200px;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+#copyright {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+    .logo,
+    .menu {
+        display: flex;
+        margin: 0 auto;
+    }
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .logo img {
+        height: 60px;
+    }
+    .menu {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+    .menu ul {
+        width: 100%;
+    }
+    .menu li {
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        width: 100%;
+    }
+    .menu li+li {
+        margin: 0;
+    }
+}

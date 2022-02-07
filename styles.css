@@ -1,225 +1,297 @@
+/* RESET a ZÁKLADNÍ */
+
+@font-face {
+    font-family: 'Heebo', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    font-family: Helvetica;
-    font-size: 22px;
-    color: seashell;
-    background-color: black;
-    text-align: center;
-    opacity: 0.9;
+html {
+    background-color: white;
+    font-size: 16px;
 }
 
-h2, h4 {
-    margin: 10px 0;
+a {
+    cursor: pointer;
 }
 
-/* NAVIGATION */
+h2 {
+    font-size: 1.5rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 600;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+/* HEADER + NAV */
+header {
+    background-image: url("resources/images/header.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
 
 nav {
-    position: fixed;
-    width: 100%;
-    min-height: 69px;
     display: flex;
-    border-bottom: 1px solid seashell;
+    flex-wrap: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    z-index: 10;
-    background-color: black;
+    width: 100%;
+    margin: 0 auto 60px auto;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    nav .menu {
+        display: none;
+    }
+}
+
+.logo,
+.menu {
+    display: inline-flex;
+    margin: 10px;
+    align-items: center;
+    color: white;
 }
 
 .logo {
-    display: inline-flex;
-    margin-left: 10px;
-    align-items: center;
-    position: relative;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.menu {
-    display: inline-flex;
-    position: relative;
-    align-items: center;
-    margin-right: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-bottom: 3px solid white;
+    padding: 5px;
 }
 
 .menu li {
     list-style: none;
-    display: inline-flex;
+    display: inline-block;
 }
 
 .menu li+li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .menu a {
-    text-decoration: underline;
-    color: seashell;
+    text-decoration: none;
+    font-family: 'Heebo', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
 }
 
 .menu a:hover {
-    color: #fed053;
+    padding-bottom: 5px;
+    border-bottom: 3px solid white;
+    transition: border-bottom .2s ease-in;
 }
 
-/* HEADER */
+.header_content h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 800px;
+    margin-bottom: 15px;
+}
 
-header {
-    top: 70px;
-    display: flex;
-    align-items: center;
-    background-image: url("images/img-mission-background.jpg");
-    max-width: 1200px;
-    height: 700px;
+.header_content p {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* OUR SERVICES */
+.main_flexbox {
+    position: relative;
+    max-width: 1100px;
     margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.mission {
-    background-color: black;
+.main_flexbox h2 {
+    color: #383838;
+}
+
+.flexbox_for_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: #383838;
+    margin: 0.625rem;
+    width: 15.625rem;
+    height: 20rem;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.box img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+/* OUR ENGINEERS */
+.engineers {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #383338;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* TEA OF THE MONTH - FEATURED TEA */
-
-.featured_tea {
-    position: relative;
-    margin: 30px auto 0 auto;
-    max-width: 1000px;
-    overflow: hidden;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
     align-content: center;
-}
-
-.featured_tea_images {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
     justify-content: center;
+    color: white;
+    padding-top: 2rem;
 }
 
-.tea_image {
+.black_bg {
+    max-width: 1100px;
+}
+
+.person {
     display: inline-flex;
     flex-direction: column;
-    margin: 10px;
-}
-
-.tea_image img {
-    width: 300px;
-    height: 200px;
-    margin-bottom: 10px;
-}
-
-/* LOCATIONS */
-
-.locations_flexbox {
-    position: relative;
-    display: flex;
-    margin: 30px auto 0 auto;
-    max-width: 1200px;
-    min-height: 500px;
-    flex-flow: column wrap;
+    width: 15.625rem;
+    align-items: center;
     justify-content: center;
+    color: white;
+    margin: 1rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.person img {
+    width: 80%;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+/* COLLABORATION */
+.collaboration {
+    display: flex;
+    max-width: 1100px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 4rem 4rem 4rem;
+}
+
+.collab_grid {
+    padding-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
     align-content: center;
-    padding: 30px 0;
-    background-image: url("images/img-locations-background.jpg");
+}
+
+@media only screen and (max-width: 1024px) {
+    .collab_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 764px) {
+    .collab_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .collab_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*ARE YOU INTERESTED SECTION*/
+.contact_bg {
+    display: flex;
+    background-image: url("resources/images/header.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.locations_flexbox h2 {
-    margin-bottom: 0;
-}
-
-.locations_boxes {
+.contact_us {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 1100px;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0 3rem 0;
+    color: white;
 }
 
-.location {
-    display: inline-flex;
-    flex-direction: column;
-    width: 300px;
-    background: black;
-    margin: 20px;
-    line-height: 2.5rem;
-    padding: 15px;
-    opacity: 1;
+.button {
+    border: 3px solid white;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+    width: 15.625rem;
+    padding: 0.7rem 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: #383838;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in;
 }
 
 /* FOOTER */
-
-.contact_footer {
-    display: flex;
-    flex-flow: column wrap;
-    min-height: 200px;
-    justify-content: space-between;
-    padding-bottom: 30px;
-    margin-top: 20px;
+footer {
+    background-color: white;
+    color: #383838;
+    padding: 1rem 0;
 }
 
-#copyright {
-    padding-left: 20px;
-    text-align: left;
+footer p {
     font-size: 0.7rem;
-    margin-bottom: 20px;
-}
-
-/* MEDIA QUERIES */
-
-@media only screen and (max-width: 768px) {
-    nav {
-        position: relative;
-        flex-direction: column;
-        align-content: center;
-        width: 100%;
-    }
-    .logo,
-    .menu {
-        display: flex;
-        margin: 0 auto;
-    }
-    .logo {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .logo img {
-        height: 60px;
-    }
-    .menu {
-        width: 100%;
-        align-content: center;
-        justify-content: center;
-    }
-    .menu ul {
-        width: 100%;
-    }
-    .menu li {
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: flex;
-        width: 100%;
-    }
-    .menu li+li {
-        margin: 0;
-    }
+    text-align: center;
 }
